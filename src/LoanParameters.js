@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const AmountRequested = ({ amountRequested, setAmountRequested }) => {
   return (
@@ -16,7 +16,7 @@ const AmountRequested = ({ amountRequested, setAmountRequested }) => {
   );
 };
 
-const Duration = ({ Duration, setDuration }) => {
+const Duration = ({ duration, setDuration }) => {
   return (
     <span>
       <span>Amount requested</span>
@@ -24,21 +24,22 @@ const Duration = ({ Duration, setDuration }) => {
         className="mb-2 mx-sm-3"
         data-test="duration-input"
         placeholder="duration"
-        value={Duration}
+        value={duration}
         onChange={(event) => setDuration(event.target.value)}
       ></input>
-      <span>(in £)</span>
+      <span>(in months)</span>
     </span>
   );
 };
 
-const LoanCalculator = () => {
-  const [amountRequested, setAmountRequested] = useState(10000);
-  const [duration, setDuration] = useState(4);
-
+const LoanParameters = ({
+  amountRequested,
+  setAmountRequested,
+  duration,
+  setDuration,
+}) => {
   return (
-    <div className="container" data-test="component-app">
-      <h1>Your loan</h1>
+    <div data-test="component-loan-parameters">
       <AmountRequested
         amountRequested={amountRequested}
         setAmountRequested={setAmountRequested}
@@ -48,4 +49,4 @@ const LoanCalculator = () => {
   );
 };
 
-export default LoanCalculator;
+export default LoanParameters;
