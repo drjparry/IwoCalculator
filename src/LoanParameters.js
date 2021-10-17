@@ -18,8 +18,8 @@ const AmountRequested = ({ amountRequested, setAmountRequested }) => {
 
 const Duration = ({ duration, setDuration }) => {
   return (
-    <span>
-      <span>Amount requested</span>
+    <div>
+      <span>Duration</span>
       <input
         className="mb-2 mx-sm-3"
         data-test="duration-input"
@@ -28,7 +28,7 @@ const Duration = ({ duration, setDuration }) => {
         onChange={(event) => setDuration(event.target.value)}
       ></input>
       <span>(in months)</span>
-    </span>
+    </div>
   );
 };
 
