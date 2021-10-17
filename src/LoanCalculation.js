@@ -40,6 +40,7 @@ const LoanCalculation = ({ amountRequested, duration, upfrontFees }) => {
         setInterestRate={setInterestRate}
       />
       {calculation && <RepaymentTable {...calculation} />}
+      {upfrontFees ? "Business Loan" : "Revolving credit facility"}
     </div>
   );
 };
