@@ -2,16 +2,22 @@ import { calculator } from "./calculator";
 
 describe("calculator", () => {
   let date;
+  let calculation;
+
   beforeEach(() => {
     date = new Date(2021, 10, 17);
+    calculation = calculator({
+      date,
+      amount: 10000,
+      months: 4,
+      interestRate: 3,
+    });
   });
   test("it returns an array for each month calculated plus a total", () => {
-    const calculation = calculator({ date, amount: 10000, months: 4 });
     expect(calculation.length).toBe(5);
   });
 
   test("each months array returns an object with the correct repayment date", () => {
-    const calculation = calculator({ date, amount: 10000, months: 4 });
     const firstMonthRepaymentDate = new Date(calculation[0]["repaymentDate"]);
     const thirdMonthRepaymentDate = new Date(calculation[2]["repaymentDate"]);
     expect(firstMonthRepaymentDate.getMonth()).toBe(11);
@@ -19,8 +25,14 @@ describe("calculator", () => {
   });
 
   test("each months array returns an object with the correct principle", () => {
-    const calculation = calculator({ date, amount: 10000, months: 4 });
     const principle = calculation[0]["principle"];
     expect(principle).toBe(2500);
+  });
+
+  test("each months array returns an object with the months interest", () => {
+    const firstMonthsInterest = calculation[0]["interest"];
+    const thirdMonthsInterest = calculation[2]["interest"];
+    expect(firstMonthsInterest).toBe(300);
+    expect(thirdMonthsInterest).toBe(150);
   });
 });
