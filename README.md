@@ -41,6 +41,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Notes on test
 
+surge site: earthy-horn.surge.sh
+
 I managed to finish the basic functionality. Unfortunately I didn't have time to style it properly. I mostly TDD'ed as you can see in the commits but as I ran out of time I focused on finishing the basic funtionality as under 'Evaluation' you stated 'testing knowledge' which I had already shown and but to focus on the maximum number of functionalities.
 
 I believe I've shown a nice separation of concerns, howver, there is plently I would improve given more time.
