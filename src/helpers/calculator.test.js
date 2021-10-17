@@ -17,4 +17,10 @@ describe("calculator", () => {
     expect(firstMonthRepaymentDate.getMonth()).toBe(11);
     expect(thirdMonthRepaymentDate.getMonth()).toBe(1);
   });
+
+  test("each months array returns an object with the correct principle", () => {
+    const calculation = calculator({ date, amount: 10000, months: 4 });
+    const principle = calculation[0]["principle"];
+    expect(principle).toBe(2500);
+  });
 });
