@@ -1,6 +1,9 @@
-export function calculator(amount, months) {
+export function calculator({ date, amount, months }) {
   const calculation = [...Array(months)].map((_, index) => {
-    return {};
+    const repaymentDate = date.setMonth(date.getMonth() + 1);
+    return {
+      repaymentDate,
+    };
   });
 
   calculation.push({});
