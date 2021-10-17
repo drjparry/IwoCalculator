@@ -1,56 +1,15 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Notes on test
 
-surge site: discreet-place.surge.sh
+surge site: https://embarrassed-corn.surge.sh/
 
-I completed this in two 2hr sessions. I managed to finish the basic functionality. Unfortunately I didn't have time to style it properly. I mostly TDD'ed as you can see in the commits but as I ran out of time I focused on finishing the basic funtionality as under 'Evaluation' you stated 'testing knowledge' which I had already shown and but to focus on the maximum number of functionalities.
+I completed this in two 2hr sessions. I managed to finish the basic functionality. Unfortunately I didn't have time to style it properly. I mostly TDD'ed as you can see in the commits but as I ran out of time I focused on finishing the basic funtionality as under 'Evaluation' you stated 'testing knowledge' which I had already shown but the top requirement was to focus on the maximum number of functionalities.
 
-I believe I've shown a nice separation of concerns, howver, there is plently I would improve given more time.
+I believe I've shown a nice separation of concerns, however, there is plently I would improve given more time.
 
 - The calculator misses a test for 'upfront fees'
-- the component LoanCalculation missed a testing file
+- the component LoanCalculation is missing a testing file
 - all tests could be more robust
 - styling of the app
 - some names could be better
 - many functions could be smaller and further broken up
-- number rounding and edge cases
+- number rounding and edge cases for the calculator
