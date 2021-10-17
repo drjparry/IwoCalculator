@@ -2,8 +2,9 @@ import React from "react";
 
 const MonthlyRepaymentRows = ({ monthlyCalculation }) => {
   return monthlyCalculation.map((month, index) => {
-    const date = new Date(month.date),
-      formattedDate = date.toDateString();
+    console.log(month);
+    const date = new Date(month.repaymentDate),
+      formattedDate = date.toLocaleDateString("en-UK");
 
     return (
       <tr key={index} data-test="monthly-calculation-row">
