@@ -17,7 +17,18 @@ const LoanCalculator = () => {
         duration={duration}
         setDuration={setDuration}
       />
-      <LoanCalculation amountRequested={amountRequested} duration={duration} />
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <LoanCalculation
+          amountRequested={amountRequested}
+          duration={duration}
+          upfrontFees={false}
+        />
+        <LoanCalculation
+          amountRequested={amountRequested}
+          duration={duration}
+          upfrontFees={true}
+        />
+      </div>
     </div>
   );
 };

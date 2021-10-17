@@ -16,9 +16,8 @@ const InterestRate = ({ interestRate, setInterestRate }) => (
   </span>
 );
 
-const LoanCalculation = ({ amountRequested, duration }) => {
+const LoanCalculation = ({ amountRequested, duration, upfrontFees }) => {
   const [interestRate, setInterestRate] = useState(3);
-
   const [calculation, setCalculation] = useState();
 
   useEffect(() => {
@@ -28,10 +27,11 @@ const LoanCalculation = ({ amountRequested, duration }) => {
         amount: parseInt(amountRequested),
         months: parseInt(duration),
         interestRate: parseInt(interestRate),
+        upfrontFees,
       });
       setCalculation(newCalculation);
     }
-  }, [amountRequested, duration, interestRate]);
+  }, [amountRequested, duration, interestRate, upfrontFees]);
 
   return (
     <div data-test="component-loan-calculation">
