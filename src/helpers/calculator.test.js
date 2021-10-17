@@ -1,5 +1,7 @@
 import { calculator } from "./calculator";
 
+const AMOUNT = 10000;
+
 describe("calculator", () => {
   let date;
   let calculation;
@@ -8,7 +10,7 @@ describe("calculator", () => {
     date = new Date(2021, 10, 17);
     calculation = calculator({
       date,
-      amount: 10000,
+      amount: AMOUNT,
       months: 4,
       interestRate: 3,
     });
@@ -41,5 +43,12 @@ describe("calculator", () => {
     const thirdMonthsRepayment = calculation[2]["totalRepayment"];
     expect(firstMonthsRepayment).toBe(2800);
     expect(thirdMonthsRepayment).toBe(2650);
+  });
+
+  test("last item in the calculation is the total principle, interest and repayment", () => {
+    const totalCalculation = calculation[4];
+    expect(totalCalculation["principle"]).toBe(AMOUNT);
+    expect(totalCalculation["interest"]).toBe(750);
+    expect(totalCalculation["totalRepayment"]).toBe(10750);
   });
 });
