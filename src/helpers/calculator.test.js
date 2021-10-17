@@ -35,4 +35,11 @@ describe("calculator", () => {
     expect(firstMonthsInterest).toBe(300);
     expect(thirdMonthsInterest).toBe(150);
   });
+
+  test("each months array returns an object with the total repayment", () => {
+    const firstMonthsRepayment = calculation[0]["totalRepayment"];
+    const thirdMonthsRepayment = calculation[2]["totalRepayment"];
+    expect(firstMonthsRepayment).toBe(2800);
+    expect(thirdMonthsRepayment).toBe(2650);
+  });
 });
